@@ -1,3 +1,4 @@
+import {postWithToken}from "https://jscroot.github.io/api/croot.js";
 import { get } from "https://jscroot.github.io/api/croot.js";
 import { setInner, addInner } from "https://jscroot.github.io/element/croot.js";
 
@@ -18,4 +19,4 @@ function response(jsonParse) {
     setInner("userTable", stringtable);
   }
   
-  get("https://reqres.in/api/users?page=2", response);
+  get("https://bimit-be.ulbi.ac.id/api/v1/get_bimbingan", response);
