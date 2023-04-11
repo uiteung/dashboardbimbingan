@@ -23,6 +23,7 @@ export function AmbilResponse(result) {
               .replace("#judul#", data.judul)
               .replace("#tipe_bimbingan#", data.tipe_bimbingan)
               .replace("#partner#", data.partner)
+              .replace("#link_gd#", data.link_gd)
               .replace("#topik#", data.topik)
               .replace("#abstrak#", data.abstrak);
             addInner("userTable", row);
@@ -30,7 +31,7 @@ export function AmbilResponse(result) {
         }    
         isitabelbimbingan(result.data);
 
-    }
+}
 
 
 

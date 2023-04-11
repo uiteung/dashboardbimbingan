@@ -12,7 +12,7 @@ export let stringtable = `
 </tr> `
 
 export let table =`
-<tbody id="userTable" class="bg-white divide-y divide-gray-200">
+<tbody class="bg-white divide-y divide-gray-200">
 <tr class="text-xs font-medium text-gray-500 text-center">
   <th class="pl-6 py-4">#pembimbing1#</th>
   <th class="pl-6 py-4">#pembimbing2#</th>
