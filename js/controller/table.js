@@ -22,6 +22,11 @@ export function AmbilResponse(result) {
   console.log(result.data);
 
   function isitabelbimbingan(jsonParse) {
+    let userTable = document.getElementById("userTable");
+        if (!userTable) {
+            console.error("userTable element not found");
+            return;
+        }
     let row = '';
     userTable.innerHTML = '';
     const start = (currentPage - 1) * rowsPerPage;
