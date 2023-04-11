@@ -14,27 +14,36 @@ export function AmbilResponse(result) {
     console.log(result.data);
    
     function isitabelbimbingan(jsonParse) {
-        let row = '';
-          jsonParse.forEach((data) => {
-              let tahunID = data.tahun_id === "20222" ? "Tahun Ajaran Genap 2022/2023" : data.tahun_id;
-              let partnernull = data.partner === "0" ? "-" : data.partner;
-              let tipeBimbingan = data.tipe_bimbingan === "ta" ? "Tugas Akhir" : data.tipe_bimbingan;
-              let judulPendek = data.judul.substring(0, 10);
-              let topikPendek = data.topik.substring(0, 10);   
-              let abstrakPendek = data.abstrak.substring(0, 10);   
-     
-              row = table.replace("#pembimbing1#", data.pembimbing1)
-                .replace("#pembimbing2#", data.pembimbing2)
-                .replace("#tahun_id#", tahunID)
-                .replace("#judul#", judulPendek)
-                .replace("#tipe_bimbingan#", tipeBimbingan)
-                .replace("#partner#", partnernull)
-                .replace("#link_gd#", data.link_gd)
-                .replace("#topik#", topikPendek)
-                .replace("#abstrak#", abstrakPendek);
-              addInner("userTable", row);
-            });
-          }    
+      let row = '';
+      let counter = 0;
+      jsonParse.forEach((data) => {
+        let tahunID = data.tahun_id === "20222" ? "Tahun Ajaran Genap 2022/2023" : data.tahun_id;
+        let partnernull = data.partner === "0" ? "-" : data.partner;
+        let tipeBimbingan = data.tipe_bimbingan === "ta" ? "Tugas Akhir" : data.tipe_bimbingan;
+        let judulPendek = data.judul.substring(0, 10);
+        let topikPendek = data.topik.substring(0, 10);
+        let abstrakPendek = data.abstrak.substring(0, 10);
+        row += table.replace("#pembimbing1#", data.pembimbing1)
+          .replace("#pembimbing2#", data.pembimbing2)
+          .replace("#tahun_id#", tahunID)
+          .replace("#judul#", judulPendek)
+          .replace("#tipe_bimbingan#", tipeBimbingan)
+          .replace("#partner#", partnernull)
+          .replace("#link_gd#", data.link_gd)
+          .replace("#topik#", topikPendek)
+          .replace("#abstrak#", abstrakPendek);
+        counter++;
+        if (counter === 10) {
+          addInner("userTable", row);
+          row = '';
+          counter = 0;
+        }
+      });
+      if (counter > 0) {
+        addInner("userTable", row);
+      }
+    }
+    
         isitabelbimbingan(result.data);
        
   
