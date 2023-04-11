@@ -16,17 +16,18 @@ export function AmbilResponse(result) {
    
     function isitabelbimbingan(jsonParse){
         let row = '';
-        jsonParse.forEach((result) => {
-        row = table.replace("#pembimbing1#", result.data.pembimbing1)
-        .replace("#pembimbing2#", result.data.pembimbing2)
-        .replace("#tahun_id#", result.data.tahun_id)
-        .replace("#judul#", result.data.judul)
-        .replace("#tipe_bimbingan#", result.data.tipe_bimbingan)
-        .replace("#partner#", result.data.partner)
-        .replace("#topik#", result.data.topik)
-        .replace("#abstrak#", result.data.abstrak);
-        addInner("userTable",row);
-        });
+        jsonParse.forEach((data) => {
+            row = table.replace("#pembimbing1#", data.pembimbing1)
+              .replace("#pembimbing2#", data.pembimbing2)
+              .replace("#tahun_id#", data.tahun_id)
+              .replace("#judul#", data.judul)
+              .replace("#tipe_bimbingan#", data.tipe_bimbingan)
+              .replace("#partner#", data.partner)
+              .replace("#topik#", data.topik)
+              .replace("#abstrak#", data.abstrak);
+            addInner("userTable", row);
+          });
+        }
     }
     isitabelbimbingan(result.data);
 
