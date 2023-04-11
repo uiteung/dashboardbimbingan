@@ -12,19 +12,19 @@ export const url = "https://bimit-be.ulbi.ac.id/api/v1/get_all_bimbingan";
 
 export function AmbilResponse(result) {
         
-    console.log(result);
+    console.log(result.data);
    
     function isitabelbimbingan(jsonParse){
         let row = '';
-        jsonParse.forEach((data) => {
-        row = table.replace("#pembimbing1#", data.pembimbing1)
-        .replace("#pembimbing2#", data.pembimbing2)
-        .replace("#tahun_id#", data.tahun_id)
-        .replace("#judul#", data.judul)
-        .replace("#tipe_bimbingan#", data.tipe_bimbingan)
-        .replace("#partner#", data.partner)
-        .replace("#topik#", data.topik)
-        .replace("#abstrak#", data.abstrak);
+        jsonParse.forEach((value) => {
+        row = table.replace("#pembimbing1#", value.data.pembimbing1)
+        .replace("#pembimbing2#", value.data.pembimbing2)
+        .replace("#tahun_id#", value.data.tahun_id)
+        .replace("#judul#", value.data.judul)
+        .replace("#tipe_bimbingan#", value.data.tipe_bimbingan)
+        .replace("#partner#", value.data.partner)
+        .replace("#topik#", value.data.topik)
+        .replace("#abstrak#", value.data.abstrak);
         addInner("userTable",row);
         });
     }
