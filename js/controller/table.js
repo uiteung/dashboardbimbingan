@@ -27,13 +27,13 @@ export function AmbilResponse(result) {
    
             row = table.replace("#pembimbing1#", data.pembimbing1)
               .replace("#pembimbing2#", data.pembimbing2)
-              .replace("#tahun_id#", data.tahun_id)
+              .replace("#tahun_id#", tahunID)
               .replace("#judul#", judulPendek)
               .replace("#tipe_bimbingan#", tipeBimbingan)
-              .replace("#partner#", data.partner)
+              .replace("#partner#", partnernull)
               .replace("#link_gd#", data.link_gd)
-              .replace("#topik#", data.topikPendek)
-              .replace("#abstrak#", data.abstrakPendek);
+              .replace("#topik#", topikPendek)
+              .replace("#abstrak#", abstrakPendek);
             addInner("userTable", row);
           });
         }    
