@@ -22,11 +22,6 @@ export function AmbilResponse(result) {
   console.log(result.data);
 
   function isitabelbimbingan(jsonParse) {
-    let userTable = document.getElementById("userTable");
-        if (!userTable) {
-            console.error("userTable element not found");
-            return;
-        }
     let row = '';
     userTable.innerHTML = '';
     const start = (currentPage - 1) * rowsPerPage;
@@ -34,7 +29,7 @@ export function AmbilResponse(result) {
     const paginatedData = jsonParse.slice(start, end);
 
     paginatedData.forEach((data) => {
-		        let tahunID = data.tahun_id === "20222" ? "Tahun Ajaran Genap 2022/2023" : data.tahun_id;
+		let tahunID = data.tahun_id === "20222" ? "Tahun Ajaran Genap 2022/2023" : data.tahun_id;
               let partnernull = data.partner === "0" ? "-" : data.partner;
               let tipeBimbingan = data.tipe_bimbingan === "ta" ? "Tugas Akhir" : data.tipe_bimbingan;
               let judulPendek = data.judul.substring(0, 10);
@@ -58,7 +53,7 @@ export function AmbilResponse(result) {
     const endRow = Math.min(currentPage * rowsPerPage, jsonParse.length);
     const totalRows = jsonParse.length;
     const pageInfoText = `Showing ${startRow} to ${endRow} of ${totalRows} results`;
-    setInner(pageInfo, pageInfoText);
+    addInner(pageInfo, pageInfoText);
   }
 
   isitabelbimbingan(result.data);
