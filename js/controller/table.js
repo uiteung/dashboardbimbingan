@@ -14,7 +14,7 @@ export function AmbilResponse(result) {
     console.log(result.data);
 
     function isiTabledata(results) {
-        results.forEach(isitabelbimbingan);
+        results['data'].forEach(isitabelbimbingan);
     }
     
     function isitabelbimbingan(jsonParse) {
