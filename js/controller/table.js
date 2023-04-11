@@ -1,4 +1,4 @@
-import { addInner } from "https://jscroot.github.io/element/croot.js";
+import { addInner, setInner, onClick  } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { table } from "../template/html.js";
 
