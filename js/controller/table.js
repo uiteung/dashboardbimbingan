@@ -1,6 +1,7 @@
 
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { stringtable , bggray} from "./template/html.js";
+// import { stringtable} from "./template/html.js";
+
 export let databimbingansemester = {
     tahun_id: parseInt("20222"),
     tipe_bimbingan: "ta",
