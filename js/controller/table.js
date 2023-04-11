@@ -17,7 +17,7 @@ export function AmbilResponse(result) {
     function isitabelbimbingan(jsonParse){
 
     function isiTabledata(results) {
-        results['data'].forEach(isitabelbimbingan);
+        results.forEach(isitabelbimbingan);
     }
     
     function isitabelbimbingan(jsonParse) {
@@ -35,7 +35,7 @@ export function AmbilResponse(result) {
             addInner("userTable", row);
           });
         }    
-        isitabelbimbingan(result.data);
+      isitabelbimbingan(result.data);
 
 }
 }
