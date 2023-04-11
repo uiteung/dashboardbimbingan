@@ -9,6 +9,7 @@ export let databimbingansemester = {
 export let token = getCookie("login");
 
 export const url = "https://bimit-be.ulbi.ac.id/api/v1/get_all_bimbingan";
+get(url,isitabelbimbingan);
 
 export function AmbilResponse(result) {
         
