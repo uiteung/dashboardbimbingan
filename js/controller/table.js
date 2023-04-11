@@ -13,12 +13,7 @@ export const url = "https://bimit-be.ulbi.ac.id/api/v1/get_all_bimbingan";
 export function AmbilResponse(result) {
         
     console.log(result.data);
-    result.data.forEach(tablebimbingan);
-
-    function tablebimbingan(result){
-        isitabelbimbingan(result);
-    }
- 
+   
     function isitabelbimbingan(jsonParse){
         let row = '';
         jsonParse.forEach((data) => {
