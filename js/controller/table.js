@@ -53,40 +53,31 @@ export function AmbilResponse(result) {
             if (page > totalPages) {
               page = totalPages;
             }
-            const currentPageElem = document.getElementById("currentPage");
-            const totalPagesElem = document.getElementById("totalPages");
-            const userTableElem = document.getElementById("userTable");
-            if (currentPageElem && totalPagesElem && userTableElem) {
-              currentPageElem.innerHTML = page;
-              totalPagesElem.innerHTML = totalPages;
-              userTableElem.innerHTML = '';
-              displayTable();
-            }
+            document.getElementById("currentPage").innerHTML = page;
+            document.getElementById("totalPages").innerHTML = totalPages;
+            document.getElementById("userTable").innerHTML = '';
+            displayTable();
           }
-          
+        
           function prevPage() {
             page--;
             if (page < 1) {
               page = 1;
             }
-            const currentPageElem = document.getElementById("currentPage");
-            const totalPagesElem = document.getElementById("totalPages");
-            const userTableElem = document.getElementById("userTable");
-            if (currentPageElem && totalPagesElem && userTableElem) {
-              currentPageElem.innerHTML = page;
-              totalPagesElem.innerHTML = totalPages;
-              userTableElem.innerHTML = '';
-              displayTable();
-            }
+            document.getElementById("currentPage").innerHTML = page;
+            document.getElementById("totalPages").innerHTML = totalPages;
+            document.getElementById("userTable").innerHTML = '';
+            displayTable();
           }
-      
-        onClick("prevBtn", prevPage);
-        onClick("nextBtn", nextPage);
-      
-        displayTable();
-        addInner("totalPages", totalPages);
-        addInner("currentPage", page);
-    }
+        
+          onClick("prevBtn", prevPage);
+            onClick("nextBtn", nextPage);
+
+          displayTable();
+          document.getElementById("totalPages").innerHTML = totalPages;
+          document.getElementById("currentPage").innerHTML = page;
+        }
+    
     
     isitabelbimbingan(result.data);
 }
