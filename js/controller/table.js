@@ -14,11 +14,6 @@ export function AmbilResponse(result) {
         
     console.log(result.data);
    
-    function isitabelbimbingan(jsonParse){
-
-    function isiTabledata(results) {
-        results.forEach(isitabelbimbingan);
-    }
     
     function isitabelbimbingan(jsonParse) {
         let row = '';
@@ -37,5 +32,5 @@ export function AmbilResponse(result) {
         }    
       isitabelbimbingan(result.data);
 
-}
+
 }
