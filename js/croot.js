@@ -7,8 +7,10 @@ function postData(token) {
     tipe_bimbingan: "ta",
   };
 
-  postWithToken("https://bimit-be.ulbi.ac.id/api/v1/get_all_bimbingan", data, token).then(() => {
-    get("https://bimit-be.ulbi.ac.id/api/v1/get_all_bimbingan", token).then((response) => {
+  const url = "https://bimit-be.ulbi.ac.id/api/v1/get_all_bimbingan";
+
+  postWithToken(url, data, token).then(() => {
+    get(url, token).then((response) => {
       response.json().then((jsonParse) => {
         let stringtable = '';
         jsonParse.data.forEach((user, index) => {
