@@ -27,9 +27,10 @@ export function AmbilResponse(result) {
               .replace("#abstrak#", data.abstrak);
             addInner("userTable", row);
           });
-        }
-    }
-    isitabelbimbingan(result.data);
+        }    
+        isitabelbimbingan(result.data);
 
-}
+    }
+
+
 
