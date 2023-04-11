@@ -1,6 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { table,Content} from "../template/html.js";
+import { table,tableContent, tableClass, tableTag} from "../template/html.js";
 
 export let databimbingansemester = {
     tahun_id: parseInt("20222"),
@@ -27,7 +27,7 @@ export function AmbilResponse(result) {
               .replace("#link_gd#", data.link_gd)
               .replace("#topik#", data.topik)
               .replace("#abstrak#", data.abstrak);
-            addInner("userTable", row);
+            addInner("userTable",tableClass,tableTag, row);
           });
         }    
       isitabelbimbingan(result.data);
