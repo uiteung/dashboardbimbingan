@@ -18,7 +18,7 @@ export function AmbilResponse(result) {
         result.forEach(isitabelbimbingan);
     }
     function isitabelbimbingan(value){
-        let content = stringtable.replace("#pembimbing1#", value.pembimbing1)
+        let content = stringtable.replace("#pembimbing1#", value.pembimbing1);
     }
 
 
