@@ -2,7 +2,7 @@
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 export let databimbingansemester = {
-    tahun_id: "20222",
+    tahun_id: parseInt("20222"),
     tipe_bimbingan: "ta",
 };
 export let token = getCookie("login");
