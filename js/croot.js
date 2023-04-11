@@ -1,45 +1,40 @@
-import { get, postWithToken } from "https://jscroot.github.io/api/croot.js";
-import { setInner, addInner } from "https://jscroot.github.io/element/croot.js";
+import { postWithToken } from "https://jscroot.github.io/api/croot.js";
+import { get, setInner } from "https://jscroot.github.io/element/croot.js";
 
-const url = "https://bimit-be.ulbi.ac.id/api/v1/get_bimbingan";
+function postData(token) {
+  let data = {
+    tahun_id: "20222",
+    tipe_bimbingan: "ta",
+  };
 
+  postWithToken("https://bimit-be.ulbi.ac.id/api/v1/get_all_bimbingan", data, token).then(() => {
+    get("https://bimit-be.ulbi.ac.id/api/v1/get_all_bimbingan", token).then((response) => {
+      response.json().then((jsonParse) => {
+        let stringtable = '';
+        jsonParse.data.forEach((user, index) => {
+          stringtable += `
+            <tr class="${index % 2 === 0 ? "bg-gray-50" : ""} text-xs">
+              <td class="pl-6 py-4">${user.pembimbing1}</td>
+              <td class="pl-6 py-4">${user.pembimbing2}</td>
+              <td class="pl-6 py-4">${user.tahun_id}</td>
+              <td class="pl-6 py-4">${user.judul}</td>
+              <td class="pl-6 py-4">${user.tipe_bimbingan}</td>
+              <td class="pl-6 py-4">${user.partner}</td>
+              <td class="pl-6 py-4">${user.link_gd}</td>
+              <td class="pl-6 py-4">${user.topik}</td>
+              <td class="pl-6 py-4">${user.abstrak}</td>
+            </tr>
+          `;
+        });
 
-const data = {
-  tahun_id: 20222,
-  tipe_bimbingan: 'ta'
-};
-function showData(jsonParse) {
-    let stringtable = '';
-    jsonParse.data.forEach((user, index) => {
-      stringtable += `
-        <tr class="${index % 2 === 0 ? "bg-gray-50" : ""} text-xs">
-          <td class="pl-6 py-4">${user.id}</td>
-          <td class="pl-6 py-4">${user.email}</td>
-          <td class="pl-6 py-4">${user.first_name}</td>
-          <td class="pl-6 py-4">${user.last_name}</td>
-          <td class="pl-6 py-4"></td>
-        </tr>
-      `;
+        setInner("userTable", stringtable);
+      });
     });
-  
-    setInner("userTable", stringtable);
-  }
+  }).catch((error) => {
+    console.log(error);
+  });
+}
 
-  function getToken() {
-    const postData = {
-      tahun_id: "20222",
-      tipe_bimbingan: "ta"
-    };
-    
-    postWithToken(`${apiUrl}/get_token`, postData, (response) => {
-      const token = response.token;
-      get(`${apiUrl}/get_bimbingan`, (data) => {
-        showData(data);
-      }, token);
-    });
-  }
-  function AmbilResponse(result) {
-    setInner("alert", result.status);
-  }
-  
-  getToken();
+function responseFunction(result) {
+  setInner("alert", result.status);
+}
