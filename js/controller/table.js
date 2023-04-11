@@ -80,6 +80,7 @@ export function AmbilResponse(result) {
       setInner("currentPage", page);
     }
     
+    
     isitabelbimbingan(result.data);
 
 
