@@ -14,6 +14,7 @@ export function AmbilResponse(result) {
         
     console.log(result.data);
 
+
     // function tablebimbingan(result){
     //     isitabelbimbingan(result);
     // }
@@ -34,4 +35,8 @@ export function AmbilResponse(result) {
     //     });
     // }
    
+}
+
+export function isitabelbimbingan(value){
+    console.log(value)
 }
