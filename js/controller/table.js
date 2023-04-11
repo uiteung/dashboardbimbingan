@@ -18,7 +18,7 @@ export function AmbilResponse(result) {
     function isitabelbimbingan(jsonParse) {
       let row = '';
         jsonParse.forEach((data) => {
-          let tahunID = data.tahun_id === "20222" ? "Tahun Ajaran Genap 2023/2022" : data.tahun_id;
+          let tahunID = data.tahun_id === "20222" ? "Tahun Ajaran Genap 2022/2023" : data.tahun_id;
             let partnernull = data.partner === "0" ? "-" : data.partner;
             let tipeBimbingan = data.tahun_id === "ta" ? "Tugas Akhir" : data.tahun_id;
             let judulPendek = data.judul.substring(0, 10);
