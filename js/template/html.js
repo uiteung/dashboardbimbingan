@@ -18,7 +18,7 @@ export let bggray = 'bg-gray-50';
 
 export let presensiTag="tr";
 export let presensiClass="text-xs font-medium text-gray-500 text-left";
-export let presensiContent=`
+export let Content=`
 <th class="pl-6 py-4">#pembimbing1#</th>
 <th class="pl-6 py-4">#pembimbing2#</th>
 <th class="pl-6 py-4">#tahun_id#</th>
