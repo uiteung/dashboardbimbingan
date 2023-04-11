@@ -1,8 +1,14 @@
-import {postWithToken}from "https://jscroot.github.io/api/croot.js";
-import { get } from "https://jscroot.github.io/api/croot.js";
+import { get, postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { setInner, addInner } from "https://jscroot.github.io/element/croot.js";
 
-function response(jsonParse) {
+const url = "https://bimit-be.ulbi.ac.id/api/v1/get_bimbingan";
+
+
+const data = {
+  tahun_id: 20222,
+  tipe_bimbingan: 'ta'
+};
+function showData(jsonParse) {
     let stringtable = '';
     jsonParse.data.forEach((user, index) => {
       stringtable += `
@@ -18,5 +24,22 @@ function response(jsonParse) {
   
     setInner("userTable", stringtable);
   }
+
+  function getToken() {
+    const postData = {
+      tahun_id: "20222",
+      tipe_bimbingan: "ta"
+    };
+    
+    postWithToken(`${apiUrl}/get_token`, postData, (response) => {
+      const token = response.token;
+      get(`${apiUrl}/get_bimbingan`, (data) => {
+        showData(data);
+      }, token);
+    });
+  }
+  function AmbilResponse(result) {
+    setInner("alert", result.status);
+  }
   
-  get("https://bimit-be.ulbi.ac.id/api/v1/get_bimbingan", response);
+  getToken();
