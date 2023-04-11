@@ -8,7 +8,6 @@ export let stringtable = `
 <td class="pl-6 py-4">#judul#</td>
 <td class="pl-6 py-4">#tipe_bimbingan#</td>
 <td class="pl-6 py-4">#partner#</td>
-<td class="pl-6 py-4">#partner#</td>
 <td class="pl-6 py-4">#topik#</td>
 <td class="pl-6 py-4">#abstrak#</td>
 </tr> `
