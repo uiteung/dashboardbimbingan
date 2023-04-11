@@ -1,4 +1,4 @@
-
+import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { table} from "./template/html.js";
 
@@ -21,15 +21,15 @@ export function AmbilResponse(result) {
  
     function isitabelbimbingan(jsonParse){
         let row = '';
-        jsonParse.forEach((element) => {
-        row = table.replace("#pembimbing1#", value.dapembimbing1)
-        .replace("#pembimbing2#", value.pembimbing2)
-        .replace("#tahun_id#", value.tahun_id)
-        .replace("#judul#", value.judul)
-        .replace("#tipe_bimbingan#", value.tipe_bimbingan)
-        .replace("#partner#", value.partner)
-        .replace("#topik#", value.topik)
-        .replace("#abstrak#", value.abstrak);
+        jsonParse.forEach((data) => {
+        row = table.replace("#pembimbing1#", data.dapembimbing1)
+        .replace("#pembimbing2#", data.pembimbing2)
+        .replace("#tahun_id#", data.tahun_id)
+        .replace("#judul#", data.judul)
+        .replace("#tipe_bimbingan#", data.tipe_bimbingan)
+        .replace("#partner#", data.partner)
+        .replace("#topik#", data.topik)
+        .replace("#abstrak#", data.abstrak);
         addInner("userTable",row);
         });
     }
