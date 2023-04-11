@@ -22,7 +22,7 @@ export function AmbilResponse(result) {
     function isitabelbimbingan(jsonParse){
         let row = '';
         jsonParse.forEach((data) => {
-        row = table.replace("#pembimbing1#", data.dapembimbing1)
+        row = table.replace("#pembimbing1#", data.pembimbing1)
         .replace("#pembimbing2#", data.pembimbing2)
         .replace("#tahun_id#", data.tahun_id)
         .replace("#judul#", data.judul)
