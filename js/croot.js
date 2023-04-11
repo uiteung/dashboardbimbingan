@@ -5,7 +5,6 @@ import { token,AmbilResponse,url,databimbingansemester } from "./controller/tabl
 
 postWithToken(url, "Login",token, databimbingansemester, AmbilResponse)
 
-onClick()
 
 
 
