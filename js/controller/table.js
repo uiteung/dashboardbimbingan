@@ -70,7 +70,7 @@ export function AmbilResponse(result) {
             displayTable();
           }
         
-           onClick("prevBtn", prevPage);
+            onClick("prevBtn", prevPage);
             onClick("nextBtn", nextPage);
 
           displayTable();
