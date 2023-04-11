@@ -12,7 +12,61 @@ export let table =`
   <th class="pl-6 py-4">#topik#</th>
   <th class="pl-6 py-4">#abstrak#</th>
 </tr>
-</tbody>`
+</tbody>
+
+<tbody><tr>
+                        <td class="p-0">
+                          <div class="flex items-center h-16 px-6">
+                            <span class="text-sm text-gray-100 font-medium">#pembimbing1#</span>
+                          </div>
+                        </td>
+                        <td class="p-0">
+                          <div class="flex items-center h-16 px-6">
+                          <span class="text-sm text-gray-100 font-medium">#pembimbing2#</span>
+                          </div>
+                        </td>
+                        <td class="p-0">
+                          <div class="flex items-center h-16 px-6">
+                            <span class="text-sm text-gray-100 font-medium">#tahun_id#</span>
+                          </div>
+                        </td>
+                        <td class="p-0">
+                          <div class="flex items-center h-16 px-6">
+                            <div class="flex h-full items-center">
+                            <span class="text-sm text-gray-100 font-medium">#judul#</span>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="p-0">
+                          <div class="flex items-center h-16 px-6">
+                            <span class="text-sm text-gray-100 font-medium">#tipe_bimbingan#</span>
+                          </div>
+                        </td>
+                        <td class="p-0">
+                          <div class="flex items-center h-16 px-6">
+                            <span class="text-sm text-gray-100 font-medium">#partner#</span>
+                          </div>
+                        </td>
+                        <td class="p-0">
+                          <div class="flex items-center h-16 px-6">
+                            <span class="text-sm text-gray-100 font-medium">#link_gd#</span>
+                          </div>
+                        </td>
+                        <td class="p-0">
+                          <div class="flex items-center h-16 px-6">
+                            <span class="text-sm text-gray-100 font-medium">J#topik#</span>
+                          </div>
+                        </td>
+                        <td class="p-0">
+                          <div class="flex items-center h-16 px-6">
+                            <span class="text-sm text-gray-100 font-medium">#abstrak#</span>
+                          </div>
+                        </td>
+                        
+                      </tr></tbody>
+
+
+`
 
 export let bggray = 'bg-gray-50';
 
