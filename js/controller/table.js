@@ -32,7 +32,7 @@ export function AmbilResponse(result) {
                 .replace("#link_gd#", data.link_gd)
                 .replace("#topik#", topikPendek)
                 .replace("#abstrak#", abstrakPendek);
-              setInner("userTable", row);
+              addInner("userTable", row);
             });
           }    
         isitabelbimbingan(result.data);
