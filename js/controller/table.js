@@ -16,9 +16,9 @@ export function AmbilResponse(result) {
    
     
     function isitabelbimbingan(jsonParse) {
-      let judulPendek = data.judul.substring(0, 10);   
       let row = '';
         jsonParse.forEach((data) => {
+            let judulPendek = data.judul.substring(0, 10);   
             row = table.replace("#pembimbing1#", data.pembimbing1)
               .replace("#pembimbing2#", data.pembimbing2)
               .replace("#tahun_id#", data.tahun_id)
