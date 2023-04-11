@@ -30,7 +30,7 @@ export function AmbilResponse(result) {
         .replace("#topik#", value.topik)
         .replace("#abstrak#", value.abstrak);
         addChild("userTable",content);
-        addInner("demo",row);
+        addInner("userTable",row);
         });
     }
    
