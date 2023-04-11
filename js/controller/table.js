@@ -55,31 +55,21 @@ export function AmbilResponse(result) {
         if (page > totalPages) {
           page = totalPages;
         }
-        const currentPageElem = document.getElementById("currentPage");
-        const totalPagesElem = document.getElementById("totalPages");
-        const userTableElem = document.getElementById("userTable");
-        if (currentPageElem && totalPagesElem && userTableElem) {
-          currentPageElem.innerHTML = page;
-          totalPagesElem.innerHTML = totalPages;
-          userTableElem.innerHTML = '';
-          displayTable();
-        }
+        setInner("currentPage", page);
+        setInner("totalPages", totalPages);
+        setInner("userTable", '');
+        displayTable();
       }
-      
+    
       function prevPage() {
         page--;
         if (page < 1) {
           page = 1;
         }
-        const currentPageElem = document.getElementById("currentPage");
-        const totalPagesElem = document.getElementById("totalPages");
-        const userTableElem = document.getElementById("userTable");
-        if (currentPageElem && totalPagesElem && userTableElem) {
-          currentPageElem.innerHTML = page;
-          totalPagesElem.innerHTML = totalPages;
-          userTableElem.innerHTML = '';
-          displayTable();
-        }
+        setInner("currentPage", page);
+        setInner("totalPages", totalPages);
+        setInner("userTable", '');
+        displayTable();
       }
     
       onClick("prevBtn", prevPage);
