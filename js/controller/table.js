@@ -1,4 +1,5 @@
 
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 export let databimbingansemester = {
     tahun_id: "20222",
