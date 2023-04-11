@@ -37,7 +37,7 @@ export let table =`
                         </td>
                         <td class="p-0">
                           <div class="flex items-center h-16 px-6">
-                            <span class="text-sm text-gray-100 font-medium">#link_gd#</span>
+                            <span class="text-sm text-gray-100 font-medium"><a href="#link_gd#">Link Google Drive</a></span>
                           </div>
                         </td>
                         <td class="p-0">
