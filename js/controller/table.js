@@ -12,7 +12,6 @@ export const url = "https://bimit-be.ulbi.ac.id/api/v1/get_all_bimbingan";
 export function AmbilResponse(result) {
         
     console.log(result.data);
-    get(url,tablebimbingan);
 
     function tablebimbingan(result){
         isitabelbimbingan(result);
@@ -21,7 +20,7 @@ export function AmbilResponse(result) {
     function isitabelbimbingan(jsonParse){
         let row = '';
         jsonParse.forEach((element) => {
-        row = stringtable.replace("#pembimbing1#", value.pembimbing1)
+        row = stringtable.replace("#pembimbing1#", value.dapembimbing1)
         .replace("#pembimbing2#", value.pembimbing2)
         .replace("#tahun_id#", value.tahun_id)
         .replace("#judul#", value.judul)
