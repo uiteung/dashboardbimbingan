@@ -28,6 +28,7 @@ export function AmbilResponse(result) {
         addInner("userTable",row);
         });
     }
-   
+    isitabelbimbingan(result.data);
+
 }
 
