@@ -1,16 +1,4 @@
 
-export let stringtable = `
-<tr class="text-xs">
-<td class="pl-6 py-4">#pembimbing1#</td>
-<td class="pl-6 py-4">#pembimbing2#</td>
-<td class="pl-6 py-4">#tahun_id#</td>
-<td class="pl-6 py-4">#judul#</td>
-<td class="pl-6 py-4">#tipe_bimbingan#</td>
-<td class="pl-6 py-4">#partner#</td>
-<td class="pl-6 py-4">#topik#</td>
-<td class="pl-6 py-4">#abstrak#</td>
-</tr> `
-
 export let table =`
 <tbody class="bg-white divide-y divide-gray-200">
 <tr class="text-xs font-medium text-gray-500 text-center">

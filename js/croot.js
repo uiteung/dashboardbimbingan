@@ -3,7 +3,7 @@ import { setInner } from "https://jscroot.github.io/element/croot.js";
 import { token,AmbilResponse,url,databimbingansemester } from "./controller/table.js"
 
 
-postWithToken(url, "Login",token, databimbingansemester,AmbilResponse)
+postWithToken(url, "Login",token, databimbingansemester, AmbilResponse)
 
 
 
