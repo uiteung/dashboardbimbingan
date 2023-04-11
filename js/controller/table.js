@@ -15,12 +15,23 @@ export function AmbilResponse(result) {
     get(url,tablebimbingan);
 
     function tablebimbingan(result){
-        result.forEach(isitabelbimbingan);
+        isitabelbimbingan(result);
     }
-    function isitabelbimbingan(value){
-        let content = stringtable.replace("#pembimbing1#", value.pembimbing1).replace("#pembimbing2#", value.pembimbing2).replace("#tahun_id#", value.tahun_id).replace("#judul#", value.judul).replace("#tipe_bimbingan#", value.tipe_bimbingan).replace("#partner#", value.partner).replace("#topik#", value.topik).replace("#abstrak#", value.abstrak);
+ 
+    function isitabelbimbingan(jsonParse){
+        let row = '';
+        jsonParse.forEach((element) => {
+        row = stringtable.replace("#pembimbing1#", value.pembimbing1)
+        .replace("#pembimbing2#", value.pembimbing2)
+        .replace("#tahun_id#", value.tahun_id)
+        .replace("#judul#", value.judul)
+        .replace("#tipe_bimbingan#", value.tipe_bimbingan)
+        .replace("#partner#", value.partner)
+        .replace("#topik#", value.topik)
+        .replace("#abstrak#", value.abstrak);
         addChild("userTable",content);
+        addInner("demo",row);
+        });
     }
-
    
 }
