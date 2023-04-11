@@ -1,6 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { table,Content} from "../template/html.js";
+import { table } from "../template/html.js";
 
 export let databimbingansemester = {
     tahun_id: parseInt("20222"),
@@ -18,7 +18,7 @@ export function AmbilResponse(result) {
     function isitabelbimbingan(jsonParse) {
         let row = '';
         jsonParse.forEach((data) => {
-            row = Content.replace("#pembimbing1#", data.pembimbing1)
+            row = table.replace("#pembimbing1#", data.pembimbing1)
               .replace("#pembimbing2#", data.pembimbing2)
               .replace("#tahun_id#", data.tahun_id)
               .replace("#judul#", data.judul)
