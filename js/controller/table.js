@@ -1,6 +1,6 @@
 import { addInner } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-// import { table} from "./template/html.js";
+import { table} from "./template/html.js";
 
 export let databimbingansemester = {
     tahun_id: parseInt("20222"),
