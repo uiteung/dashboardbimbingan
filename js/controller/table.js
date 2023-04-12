@@ -17,12 +17,12 @@ export function AmbilResponse(result) {
         let row = '';
         const pembimbingMapping = {
           'NN056L': 'Cahyo Prianto, S.Pd., M.T.,CDSP, SFPC',
-          'TI126L': 'M. Yusril Helmi Setyawan, S.Kom., M.Kom.,SFPC.',
+          'TI126L': 'M. Yusril Helmi Setyawan, S.Kom., M.Kom.,SFPC',
           'TI122L': 'Mohamad Nurkamal Fauzan, S.T., M.T., SFPC',
           'NN222L': 'Nisa Hanum Harani, S.Kom., M.T.,CDSP, SFPC',
           'NN225L': 'Noviana Riza, S.Si., M.T., SFPC',
           'LB053L': 'Rd. Nuraini Siti Fatonah, S.S., M.Hum., SFPC',
-          'NN257L': 'Rolly Maulana Awangga,S.T.,MT.,CAIP, SFPC.',
+          'NN257L': 'Rolly Maulana Awangga,S.T.,MT.,CAIP, SFPC',
           'NN258L': 'Roni Andarsyah, S.T., M.Kom., SFPC',
           'TI117L': 'Roni Habibi, S.Kom., M.T., SFPC',
           'TI125L': 'Syafrial Fachri Pane,ST. MTI,EBDP.CDSP,SFPC',
