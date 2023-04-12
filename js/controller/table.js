@@ -15,6 +15,19 @@ export function AmbilResponse(result) {
    
     function isitabelbimbingan(jsonParse) {
         let row = '';
+        export const pembimbingMapping = {
+          'NN056L': 'Cahyo Prianto, S.Pd., M.T.,CDSP, SFPC',
+          'TI126L': 'M. Yusril Helmi Setyawan, S.Kom., M.Kom.,SFPC.',
+          'TI122L': 'Mohamad Nurkamal Fauzan, S.T., M.T., SFPC',
+          'NN222L': 'Nisa Hanum Harani, S.Kom., M.T.,CDSP, SFPC',
+          'NN225L': 'Noviana Riza, S.Si., M.T., SFPC',
+          'LB053L': 'Rd. Nuraini Siti Fatonah, S.S., M.Hum., SFPC',
+          'NN257L': 'Rolly Maulana Awangga,S.T.,MT.,CAIP, SFPC.',
+          'NN258L': 'Roni Andarsyah, S.T., M.Kom., SFPC',
+          'TI117L': 'Roni Habibi, S.Kom., M.T., SFPC',
+          'TI125L': 'Syafrial Fachri Pane,ST. MTI,EBDP.CDSP,SFPC',
+          'TI041L': 'Woro Isti Rahayu, S.T., M.T., SFPC',
+        };
           jsonParse.forEach((data) => {
               let tahunID = data.tahun_id === "20222" ? "Tahun Ajaran Genap 2022/2023" : data.tahun_id;
               let partnernull = data.partner === "0" ? "-" : data.partner;
@@ -22,9 +35,10 @@ export function AmbilResponse(result) {
               let judulPendek = data.judul.substring(0, 10);
               let topikPendek = data.topik.substring(0, 10);   
               let abstrakPendek = data.abstrak.substring(0, 10);   
-     
-              row = table.replace("#pembimbing1#", data.pembimbing1)
-                .replace("#pembimbing2#", data.pembimbing2)
+              const pembimbing1 = pembimbingMapping[data.pembimbing1] || data.pembimbing1;
+              const pembimbing2 = pembimbingMapping[data.pembimbing2] || data.pembimbing2;
+              row = table.replace("#pembimbing1#", pembimbing1)
+                .replace("#pembimbing2#", pembimbing2)
                 .replace("#tahun_id#", tahunID)
                 .replace("#judul#", judulPendek)
                 .replace("#tipe_bimbingan#", tipeBimbingan)
