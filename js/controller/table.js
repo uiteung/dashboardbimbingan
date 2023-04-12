@@ -15,7 +15,7 @@ export function AmbilResponse(result) {
    
     function isitabelbimbingan(jsonParse) {
         let row = '';
-        export const pembimbingMapping = {
+        const pembimbingMapping = {
           'NN056L': 'Cahyo Prianto, S.Pd., M.T.,CDSP, SFPC',
           'TI126L': 'M. Yusril Helmi Setyawan, S.Kom., M.Kom.,SFPC.',
           'TI122L': 'Mohamad Nurkamal Fauzan, S.T., M.T., SFPC',
