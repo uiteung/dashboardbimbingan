@@ -37,7 +37,8 @@ export function AmbilResponse(result) {
               let abstrakPendek = data.abstrak.substring(0, 10);   
               const pembimbing1 = pembimbingMapping[data.pembimbing1] || data.pembimbing1;
               const pembimbing2 = pembimbingMapping[data.pembimbing2] || data.pembimbing2;
-              row = table.replace("#pembimbing1#", pembimbing1)
+              row = table.replace("#npm#", data.npm)
+                .replace("#pembimbing1#", pembimbing1)
                 .replace("#pembimbing2#", pembimbing2)
                 .replace("#tahun_id#", tahunID)
                 .replace("#judul#", judulPendek)

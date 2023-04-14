@@ -4,6 +4,11 @@ export let table =`
 
 <tbody><tr>
                         <td class="p-0">
+                        <div class="flex items-center h-16 px-6">
+                          <span class="text-sm text-gray-100 font-medium">#npm#</span>
+                        </div>
+                        </td>
+                        <td class="p-0">
                           <div class="flex items-center h-16 px-6">
                             <span class="text-sm text-gray-100 font-medium">#pembimbing1#</span>
                           </div>
