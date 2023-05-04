@@ -14,7 +14,7 @@ export function AmbilResponse(result) {
     console.log(result.data);
     
     if (!token) {
-      window.location.replace = 'iteung.ulbi.ac.id'; 
+      window.location.href = 'https://iteung.ulbi.ac.id';
       return; 
     }
    
